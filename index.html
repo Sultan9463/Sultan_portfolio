@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Arzika Zeyanou</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --accent: #0F6EFD;
+            --bg: #0f1724;
+            --card: #0b1220;
+            --muted: #94a3b8;
+            color-scheme: dark;
+        }
+
+        body {
+            background: var(--bg);
+            color: white;
+        }
+
+            header, footer {
+        background: var(--accent) !important;
+        color: #fff !important;
+    }
+
+        .card-custom {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 25px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            border: 1px solid var(--accent);
+        }
+
+        .light-mode {
+          background: #f8f9fa !important;
+          color: #000 !important;
+        }
+
+        .light-mode .card-custom {
+            background: #ffffff;
+            color: #000;
+        }
+
+        .light-mode .navbar,
+        .light-mode footer {
+            background: #fff !important;
+            color: #000 !important;
+        }
+.light-mode a {
+    color: #0F6EFD !important;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1 class="fw-bold">Arzika Mijinyawa Zeyanou</h1>
+        <p class="fs-5">Développeur Web | Étudiant HTML & CSS | Futur Expert en Programmation</p>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+                  <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#contact">Contact</a></li>
+                </ul>
+                <li class="nav-item d-flex align-items-center">
+              <button id="theme-toggle" class="btn btn-link text-primary fs-4">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+              </button>
+            </li>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION ABOUT -->
+    <section id="about" class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <h1>Je suis Sultan_Blh — Développeur & Designer Web</h1>
+                <p>
+                    Passionné par le développement web et mobile. Après avoir terminé mon mémoire sur la planification
+                    d'un plan d'urgence, je me suis lancé dans la programmation.  
+                    J’apprends actuellement HTML, CSS, Bootstrap et Flutter + Firebase pour créer des sites modernes et
+                    des applications utiles.
+                </p>
+
+                <button class="btn btn-primary mt-3">Mon expertise</button>
+            </div>
+
+            <div class="col-md-6" data-aos="fade-left">
+                <img src="images/sultan_B.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION EXPERTISE -->
+    <section id="skills" class="container py-5">
+       <!-- <h3 class="mb-4">Mon expertise</h3> -->
+        <h2 class="mb-4">Mon expertise</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-6" data-aos="zoom-in">
+                <div class="card-custom">
+                    <h4>Développement Web</h4>
+                    <p>
+                        - HTML5, CSS3, Bootstrap 5 <br>
+                        - Sites modernes & responsives <br>
+                        - Intégration de maquettes & UI simple <br>
+                        - Animation légère et design propre
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-in">
+                <div class="card-custom">
+                    <h4>Design Web</h4>
+                    <p>
+                        - Création de maquettes simples <br>
+                        - Figma, Canva, Font Awesome <br>
+                        - Mise en page élégante et intuitive
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-in">
+                <div class="card-custom">
+                    <h4>Développement Mobile</h4>
+                    <p>
+                        - Flutter (Dart) <br>
+                        - Création d’interfaces mobiles <br>
+                        - Navigation, UI mobile moderne
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6" data-aos="zoom-in">
+                <div class="card-custom">
+                    <h4>Firebase</h4>
+                    <p>
+                        - Authentication (Login / Signup) <br>
+                        - Gestion des utilisateurs <br>
+                        - Connexion avec Flutter
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION PROJECTS -->
+    <section id="projects" class="container py-5">
+        <h2 class="text-center mb-4">Mes projets réalisés</h2>
+
+        <div class="row g-4">
+
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="card-custom">
+                    <h5>Portfolio Personnel</h5>
+                    <p>Site responsive créé avec HTML, CSS et Bootstrap.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="card-custom">
+                    <h5>Site de Recettes</h5>
+                    <p>Projet en cours : pages modernes, cartes dynamiques.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="card-custom">
+                    <h5>App Pompiers</h5>
+                    <p>Prototype Flutter + Firebase : connexion & alertes.</p>
+                </div>
+            </div>
+
+            <div class="col-md-3" data-aos="fade-up">
+                <div class="card-custom">
+                    <h5>Landing Pages Modernes</h5>
+                    <p>Modèles UI/UX modernes réalisés avec Bootstrap.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="container py-5">
+        <h2 class="text-primary fw-bold mb-4">Contact</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+                <img src="images/grab-a-coffee.jpg" alt="" class="img-fluid">
+            </div>
+
+            <div class="col-md-6" data-aos="fade-left">
+                <h4>Prêt pour une collaboration ?</h4>
+                <p>Envoyez-moi un message :</p>
+
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Nom complet" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+
+                    <div class="col-12">
+                        <textarea class="form-control" rows="5" placeholder="Votre message"></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn btn-primary px-4">Envoyer</button>
+                    </div>
+                </form>
+
+                <p class="mt-3">Ou écrivez directement :  
+                    <a href="mailto:zeyanouarzika07@gmail.com" class="text-primary fw-bold">
+                        zeyanouarzika07@gmail.com
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-white text-center py-3 mt-4">
+        © 2025 - Portfolio de Arzika Zeyanou | Mi Tech
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init();</script>
+
+
+    <script>
+        // init AOS
+        AOS.init({ duration: 600, once: true });
+
+        // Theme toggle logic (Option 2: icon toggle)
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+
+        const THEME_KEY = 'arzika_theme';
+
+        // Apply initial theme:
+        function applyTheme(theme) {
+            if (theme === 'light') {
+                document.body.classList.add('light-mode');
+                themeIcon.className = 'fa-solid fa-sun'; // sun icon
+                themeToggle.title = 'Passer en mode sombre';
+            } else {
+                document.body.classList.remove('light-mode');
+                themeIcon.className = 'fa-solid fa-moon'; // moon icon
+                themeToggle.title = 'Passer en mode clair';
+            }
+        }
+
+        // Load saved preference or system preference
+        (function initTheme() {
+            const saved = localStorage.getItem(THEME_KEY);
+            if (saved) {
+                applyTheme(saved);
+            } else {
+                // If user prefers light in OS set to light, show light; otherwise dark
+                const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+                applyTheme(prefersLight ? 'light' : 'dark');
+            }
+        })();
+
+        // Toggle handler
+        themeToggle.addEventListener('click', () => {
+            const isLight = document.body.classList.contains('light-mode');
+            const newTheme = isLight ? 'dark' : 'light';
+            applyTheme(newTheme);
+            localStorage.setItem(THEME_KEY, newTheme);
+        });
+    </script>
+
+</body>
+</html>
