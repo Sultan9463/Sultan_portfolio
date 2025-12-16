@@ -22,15 +22,22 @@
             color-scheme: dark;
         }
 
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+
         body {
             background: var(--bg);
             color: white;
         }
 
-            header, footer {
-        background: var(--accent) !important;
-        color: #fff !important;
-    }
+        header,
+        footer {
+            background: var(--accent) !important;
+            color: #fff !important;
+        }
 
         .card-custom {
             background: var(--card);
@@ -46,8 +53,8 @@
         }
 
         .light-mode {
-          background: #f8f9fa !important;
-          color: #000 !important;
+            background: #f8f9fa !important;
+            color: #000 !important;
         }
 
         .light-mode .card-custom {
@@ -60,37 +67,40 @@
             background: #fff !important;
             color: #000 !important;
         }
-.light-mode a {
-    color: #0F6EFD !important;
-}
 
+        .light-mode a {
+            color: #0F6EFD !important;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- HEADER -->
-    <header class="bg-primary text-white text-center py-5">
+    <header class="bg-primary text-white text-center px-1 py-5">
         <h1 class="fw-bold">Arzika Mijinyawa Zeyanou</h1>
-        <p class="fs-5">Développeur Web | Étudiant HTML & CSS | Futur Expert en Programmation</p>
+        <p class="fs-5">Développeur Web <span class="text-danger">|</span> Étudiant HTML & CSS<span
+                class="text-danger ps-2 ">|</span> Futur Expert en Programmation</p>
     </header>
 
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
         <div class="container">
+            <li class="nav-item d-flex align-items-center">
+                <button id="theme-toggle" class="btn btn-link text-secondary fs-4">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </li>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse justify-content-center" id="navMenu">
-                <li class="nav-item d-flex align-items-center">
-                    <button id="theme-toggle" class="btn btn-link text-secondary fs-4">
-                    <i id="theme-icon" class="fa-solid fa-moon"></i>
-                    </button>
-                </li>
-                  <ul class="navbar-nav gap-3">
+
+                <ul class="navbar-nav gap-3">
                     <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#skills">Compétences</a>
+                    </li>
                     <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#projects">Projets</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold text-primary" href="#contact">Contact</a></li>
                 </ul>
@@ -105,7 +115,7 @@
                 <h1>Je suis Sultan_Blh — Développeur & Designer Web</h1>
                 <p>
                     Passionné par le développement web et mobile. Après avoir terminé mon mémoire sur la planification
-                    d'un plan d'urgence, je me suis lancé dans la programmation.  
+                    d'un plan d'urgence, je me suis lancé dans la programmation.
                     J’apprends actuellement HTML, CSS, Bootstrap et Flutter + Firebase pour créer des sites modernes et
                     des applications utiles.
                 </p>
@@ -121,7 +131,7 @@
 
     <!-- SECTION EXPERTISE -->
     <section id="skills" class="container py-5">
-       <!-- <h3 class="mb-4">Mon expertise</h3> -->
+        <!-- <h3 class="mb-4">Mon expertise</h3> -->
         <h2 class="mb-4">Mon expertise</h2>
 
         <div class="row g-4">
@@ -180,29 +190,29 @@
 
         <div class="row g-4">
 
-            <div class="col-md-3" data-aos="fade-up">
-                <div class="card-custom">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="card-custom h-100">
                     <h5>Portfolio Personnel</h5>
                     <p>Site responsive créé avec HTML, CSS et Bootstrap.</p>
                 </div>
             </div>
 
-            <div class="col-md-3" data-aos="fade-up">
-                <div class="card-custom">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="card-custom h-100">
                     <h5>Site de Recettes</h5>
                     <p>Projet en cours : pages modernes, cartes dynamiques.</p>
                 </div>
             </div>
 
-            <div class="col-md-3" data-aos="fade-up">
-                <div class="card-custom">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="card-custom h-100">
                     <h5>App Pompiers</h5>
                     <p>Prototype Flutter + Firebase : connexion & alertes.</p>
                 </div>
             </div>
 
-            <div class="col-md-3" data-aos="fade-up">
-                <div class="card-custom">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+                <div class="card-custom h-100">
                     <h5>Landing Pages Modernes</h5>
                     <p>Modèles UI/UX modernes réalisés avec Bootstrap.</p>
                 </div>
@@ -210,6 +220,7 @@
 
         </div>
     </section>
+
     <!-- CONTACT -->
     <section id="contact" class="container py-5">
         <h2 class="text-primary fw-bold mb-4">Contact</h2>
@@ -222,27 +233,38 @@
                 <h4>Prêt pour une collaboration ?</h4>
                 <p>Envoyez-moi un message :</p>
 
-                <form class="row g-3">
+                <form id="contact-form" action="https://formspree.io/f/xvgejkge" method="POST" class="row g-3">
+
                     <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Nom complet" required>
+                        <input type="text" name="name" class="form-control" placeholder="Nom complet" required>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Email" required>
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
                     </div>
 
                     <div class="col-12">
-                        <textarea class="form-control" rows="5" placeholder="Votre message"></textarea>
+                        <textarea name="message" class="form-control" rows="5" placeholder="Votre message"
+                            required></textarea>
                     </div>
 
                     <div class="col-12">
-                        <button class="btn btn-primary px-4">Envoyer</button>
+                        <button type="submit" class="btn btn-primary px-4">
+                            Envoyer
+                        </button>
                     </div>
+
+                    <!-- Message de succès -->
+                    <div class="col-12">
+                        <p id="form-status" class="fw-semibold mt-3"></p>
+                    </div>
+
                 </form>
 
-                <p class="mt-3">Ou écrivez directement :  
+
+                <p class="mt-3">Ou écrivez directement :
                     <a href="mailto:zeyanouarzika07@gmail.com" class="text-primary fw-bold">
-                        zeyanouarzika07@gmail.com
+                        arzikazeyanou4@gmail.com
                     </a>
                 </p>
             </div>
@@ -305,5 +327,40 @@
         });
     </script>
 
+    <script>
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const data = new FormData(form);
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    status.innerHTML = "✅ Message envoyé avec succès. Merci !";
+                    status.classList.add("text-success");
+                    form.reset();
+                } else {
+                    status.innerHTML = "❌ Une erreur s'est produite. Réessayez.";
+                    status.classList.add("text-danger");
+                }
+            } catch (error) {
+                status.innerHTML = "❌ Problème de connexion.";
+                status.classList.add("text-danger");
+            }
+        });
+    </script>
+
+
 </body>
+
 </html>
