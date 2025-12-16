@@ -32,6 +32,12 @@
             background: var(--bg);
             color: white;
         }
+        p{
+            font-size: 1.5rem;
+        }
+        li, a{
+            font-size: 1.5rem;
+        }
 
         header,
         footer {
@@ -120,7 +126,7 @@
                     des applications utiles.
                 </p>
 
-                <button class="btn btn-primary mt-3">Mon expertise</button>
+                <button class="btn btn-primary mt-3 py-3 px-4 fs-4">Mon expertise</button>
             </div>
 
             <div class="col-md-6" data-aos="fade-left">
@@ -230,26 +236,26 @@
             </div>
 
             <div class="col-md-6" data-aos="fade-left">
-                <h4>Prêt pour une collaboration ?</h4>
-                <p>Envoyez-moi un message :</p>
+                <h2>Prêt pour une collaboration ?</h2>
+                <p class="fs-4">Envoyez-moi un message :</p>
 
                 <form id="contact-form" action="https://formspree.io/f/xvgejkge" method="POST" class="row g-3">
 
                     <div class="col-md-6">
-                        <input type="text" name="name" class="form-control" placeholder="Nom complet" required>
+                        <input type="text" name="name" class="form-control py-3" placeholder="Nom complet" required>
                     </div>
 
                     <div class="col-md-6">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        <input type="email" name="email" class="form-control py-3" placeholder="Email" required>
                     </div>
 
                     <div class="col-12">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Votre message"
+                        <textarea name="message" class="form-control pb-5" rows="5" placeholder="Votre message"
                             required></textarea>
                     </div>
 
                     <div class="col-12">
-                        <button type="submit" class="btn btn-primary px-4">
+                        <button type="submit" class="btn btn-primary py-3 px-4 fs-4">
                             Envoyer
                         </button>
                     </div>
